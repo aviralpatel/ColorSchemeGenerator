@@ -1,0 +1,131 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.holder{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#body-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    max-width: 800px;
+    margin: auto;
+    border: 4px solid gray;
+    border-radius: 10px;
+    position: relative;
+}
+
+#top-bar{
+    display: grid;
+    height: 70px;
+    grid-template-columns: 15% 40% 15% 30%; 
+}
+
+#colors-div{
+    height: 470px;
+    width: 100%;
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: 400px 70px;
+}
+
+
+#colorselect{
+    grid-column: 1;
+    margin: auto auto auto 10px;
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+    border: none;
+}
+
+#modeselect{
+    box-sizing: border-box;
+    grid-column: 2;
+    margin: auto auto;
+    width: 80%;
+    height: 40px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+#countbutton{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    margin: auto auto;
+    padding: 0px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+#getbutton{
+    grid-column: 4;
+    width: 80%;
+    height: 40px;
+    margin: auto 10px auto auto;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.colorholder{
+    grid-row: 1;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.colorVal{
+    grid-row: 2;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+#popup-heading{
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the popup */
+    width: 200px;
+    height: 70px;
+    background-color: rgba(95, 99, 103, 0.5);
+    opacity: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 23px;
+    border: none;
+    border-radius: 10px;
+    color: antiquewhite;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
